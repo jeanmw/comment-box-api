@@ -21,7 +21,7 @@ app.set('view engine', 'ejs');
 
 // connect to mongodb
 mongoose.connect(
-  process.env.MONGOLAB_URI ||
+  'mongodb://heroku_12h2kz8m:hcl5uli0akntnkkso6men86pcs@ds149820.mlab.com:49820/heroku_12h2kz8m' ||
   'mongodb://localhost/comment-box-api'
 );
 
