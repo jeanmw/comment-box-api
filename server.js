@@ -22,7 +22,6 @@ app.set('view engine', 'ejs');
 // connect to mongodb
 mongoose.connect(
   process.env.MONGOLAB_URI ||
-  process.env.MONGOHQ_URL ||
   'mongodb://localhost/comment-box-api'
 );
 
