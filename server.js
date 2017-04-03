@@ -31,7 +31,7 @@ var seedComments = require('./seed.js');
 
 // get all comments
 app.get('/comments', function (req, res) {
-  // find all books in db
+  // find all in db
   Comment.find(function (err, allComments) {
     if (err) {
       res.status(500).json({ error: err.message });
