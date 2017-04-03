@@ -118,9 +118,9 @@ app.get('/reset', function (req, res) {
 
 app.post('/reset',function(req, res) {
   Comment.remove({}, function (err, removedComments) {
-    Comment.create(seedComments, function(err, createdBooks){
+    Comment.create(seedComments, function(err, createdComments){
       if(req.params.format === 'json') {
-        res.status(201).json(createdBooks.concat(createdWines).concat(createdPokemons));
+        res.status(201).json(createdComments);
       } else {
         res.redirect('/');
       }
